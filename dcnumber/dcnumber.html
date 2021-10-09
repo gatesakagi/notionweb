@@ -18,33 +18,56 @@
         gtag('config', 'UA-208560280-1');
     </script>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{ height: 100%; }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+        #btn-start{
+            flex: 0 0 100%;
+            -webkit-appearance: none;
+            outline: none;
+            border: none;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
         .dcnumberresult { font-size: 26px; }
         .dcnumberresult span{ color:chocolate; }
     </style>
 </head>
 <body>
+    <button id="btn-start">🎯開始🎯</button>
     <script>
-        Swal.fire({
-            title: '請輸入你在Discord的編號',
-            html: `<input type="text" id="dcnumber" class="swal2-input" placeholder="0000" maxlength="4" autocomplete = "off">`,
-            confirmButtonText: '確認',
-            focusConfirm: false,
-            preConfirm: () => {
-                const dcnumber = Swal.getPopup().querySelector('#dcnumber').value;
-                if (!dcnumber || isNaN(dcnumber)) {
-                    Swal.showValidationMessage(`請輸入你在Discord的編號`);
-                }
-                return { dcnumber: dcnumber }
-            }
-        }).then((result) => {
-            const dcnumberResult = dcnumberHandle(result.value.dcnumber);
+        document.getElementById('btn-start').addEventListener('click', function(){
             Swal.fire({
-                title: '照常造句小遊戲結果',
-                html: `<p class='dcnumberresult'>${dcnumberResult}</p>`,
-                confirmButtonText: '確認'
-            });
-        })
-
+                title: '請輸入你在Discord的編號',
+                html: `<input type="text" id="dcnumber" class="swal2-input" placeholder="0000" maxlength="4" autocomplete = "off">`,
+                confirmButtonText: '確認',
+                focusConfirm: false,
+                preConfirm: () => {
+                    const dcnumber = Swal.getPopup().querySelector('#dcnumber').value;
+                    if (!dcnumber || isNaN(dcnumber)) {
+                        Swal.showValidationMessage(`請輸入你在Discord的編號`);
+                    }
+                    return { dcnumber: dcnumber }
+                }
+            }).then((result) => {
+                const dcnumberResult = dcnumberHandle(result.value.dcnumber);
+                Swal.fire({
+                    title: '照常造句小遊戲結果',
+                    html: `<p class='dcnumberresult'>${dcnumberResult}</p>`,
+                    confirmButtonText: '確認'
+                });
+            })
+        }, false);
+        
         function dcnumberHandle(dcnumber){
             const dcnumberArray = dcnumber.split("");
             const whoArray = ["雷蒙","柚子","Kevin 助教","楷茵助教","庾琁助教","涵渝助教","第一小隊隊員","第二小隊隊員","第三小隊隊員","第四小隊隊員"];
