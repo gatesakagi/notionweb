@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+html > *{
+    font-family: Arial,"微軟正黑體修正","微軟正黑體","Helvetica Neue",Helvetica,sans-serif,"新細明體";
+    overflow-y: scroll;
+}
+img{
+    max-width: 100%;
+    vertical-align: top;
+}
+.container{
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+}
+.main{
+    position: relative;
+}
+.notioninfobox{
+    padding: 1em 10.4166666667%;
+}
+.notioninfobox h1{
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+}
+.notioninfoitem{
+    padding: 1em 0 0.5em 0;
+    display: flex;
+}
+.notioninfoitem.task{
+    padding-bottom: 0;
+}
+.notioninfotitle{
+    flex: 0 0 160px;
+    color: rgba(55, 53, 47, 0.4);
+    font-size: 16px;
+}
+.notioninfocontent span{
+    display: inline-block;
+    color: rgb(55, 53, 47);
+    background: rgba(206, 205, 202, 0.5);
+    border-radius: 3px;
+    padding: 3px 6px;
+}
+.notioninfocontent span.empty{
+    color: rgba(206, 205, 202, 0.5);
+    background-color: transparent;
+}
+.notioninfocontent span.term{
+    background-color: rgba(103, 36, 222, 0.2);
+}
+.svgimg{
+    width: 16px;
+}
+.notioninfocontent.class{
+    display: flex;
+    flex-wrap: wrap;
+}
+.notionclassitem{
+    padding-bottom: 10px;
+}
+.notionclassitem img{
+    width: 16px;
+    vertical-align: baseline;
+}
+.notionclassitem span{
+    line-height: 16px;
+    background-color: transparent;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+.notioninfoitem.student{
+    position: relative;
+}
+.notioninfoitem.student img{ width: 16px; }
+.notioninfoitem.student .notioninfocontent img,
+.notioninfoitem.comment img{ width: 20px; }
+.notioninfoitem.comment{
+    border-top: 2px solid #CCC;
+    border-bottom: 2px solid #CCC;
+    padding: 1.5em 0 1.5em 1.5em;
+    margin: 1em 0 0 0;
+}
+.notioninfoitem.comment span{
+    background-color: transparent;
+    color: #AAA
+}
+.thankbox{
+    min-height: 20vh;
+    padding: 1em 10.4166666667%;
+}
+.thankcontent{
+    font-size: 16px;
+    line-height: 1.5;
+}
+.footer{
+    display: flex;
+}
+.navbar{
+    position: absolute;
+    left: -10.4166666667%;
+    right: -10.4166666667%;
+    top: 1em;
+}
+.navbar .btn{
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+.btn.prev{
+    float: left;
+}
+.btn.next{
+    float :right;
+}
+.btn.disabled{
+    cursor:not-allowed;
+    color: #CCC;
+}

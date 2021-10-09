@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.png" sizes="16x16" type="image/png">
+    <title>Notion訓練營(第1屆)給教學團隊的感謝</title>
+    <link rel="stylesheet" href="style-thank.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-208560280-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-208560280-1');
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="imgbox">
+                <img src="images/kv.jpg" alt="">
+            </div> 
+        </header>
+        <main class="main">
+            <section class="notioninfobox">
+                
+                <h1>給教學團隊的話</h1>
+                <div class="notioninfoitem">
+                    <div class="notioninfotitle"><img src="images/select.svg" alt="" class="svgimg"> 作業狀態</div>
+                    <div class="notioninfocontent"><span>🙌🏼 初次完成</span></div>
+                </div>
+                <div class="notioninfoitem">
+                    <div class="notioninfotitle"><img src="images/select.svg" alt="" class="svgimg"> 批改狀態</div>
+                    <div class="notioninfocontent"><span>尚未批改</span></div>
+                </div>
+                <div class="notioninfoitem">
+                    <div class="notioninfotitle"><img src="images/select.svg" alt="" class="svgimg"> 作業評級</div>
+                    <div class="notioninfocontent"><span class="empty">Empty</span></div>
+                </div>
+                <div class="notioninfoitem">
+                    <div class="notioninfotitle"><img src="images/select.svg" alt="" class="svgimg"> 屆數</div>
+                    <div class="notioninfocontent"><span class="term">第一屆 Notion 線上訓練營</span></div>
+                </div>
+                <div class="notioninfoitem task">
+                    <div class="notioninfotitle"><img src="images/relation.svg" alt="" class="svgimg"> 工作任務</div>
+                    <div class="notioninfocontent class">
+                        <div class="notionclassitem"><img src="images/notionclass.png" alt=""><span>W5 - 結營儀式</span></div>
+                        <div class="notionclassitem"><img src="images/notionclass.png" alt=""><span>W4 - 關係系統</span></div>
+                        <div class="notionclassitem"><img src="images/notionclass.png" alt=""><span>W3 - 知識系統</span></div>
+                        <div class="notionclassitem"><img src="images/notionclass.png" alt=""><span>W2 - 回顧系統</span></div>
+                        <div class="notionclassitem"><img src="images/notionclass.png" alt=""><span>W1 - 開營儀式</span></div>
+                        
+                    </div>
+                </div>
+                <div class="notioninfoitem total">
+                    <div class="notioninfotitle"><img src="images/total.svg" alt="" class="svgimg"> 篇數</div>
+                    <div class="notioninfocontent" id="thankstotal"></div>
+                </div>
+                <div class="notioninfoitem student">
+                    <div class="notioninfotitle"><img src="images/relation.svg" alt="" class="svgimg"> 學員</div>
+                    <div class="notioninfocontent"><img src="images/logo.png"> <span id="studenttitle"></span></div>
+                    <div class="navbar">
+                        <button class="btn prev disabled" id="prev" title="前一位">◀</button>
+                        <button class="btn next" id="next" title="後一位">▶</button>
+                    </div>
+                </div>
+
+                <div class="notioninfoitem comment">
+                    <div class="notioninfocontent"><img src="images/logo.png"> <span>Add a comment...</span></div>
+                </div>
+            </section>
+
+            <section class="thankbox" id="thankbox"></section>
+        </main>
+
+        <footer class="footer">
+            <img src="images/footer.png" alt="">
+        </footer>
+        
+        
+
+    </div>
+    <script type="module" src="main-thank.js"></script>
+</body>
+</html>
