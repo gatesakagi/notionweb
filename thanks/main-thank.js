@@ -1,12 +1,20 @@
 async function getThanksByDB() {
+    
     let url = 'https://gatesakagi-notionapi.herokuapp.com/api/thanks';
     let obj = null;
+
+    Swal.fire({
+        title: '',
+        text: "資料載入中...請稍等",
+        showConfirmButton: false
+    });
     
     try {
         obj = await (await fetch(url)).json();
     } catch(e) {
         console.log('error');
     }
+    Swal.close();
     readThankDB = obj;
     thanksMax = Object.keys(obj).length;
     console.log(thanksMax);
