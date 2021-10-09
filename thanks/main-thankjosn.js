@@ -29,7 +29,6 @@ function addData(index) {
     studentnameDiv.classList.add("studentname");
     studentnameDiv.innerHTML = `${thankData.student}`;
     studenttitle.append(studentnameDiv);
-
     const pattern = /\n/g;
     const thankcontent = thankData.thank.replace(pattern, '<br>')
     thankbox.innerHTML = '';
@@ -37,7 +36,6 @@ function addData(index) {
     thankDiv.classList.add("thankcontent");
     thankDiv.innerHTML = `${thankcontent}`;
     thankbox.append(thankDiv);
-
     thankstotal.innerHTML = '';
     const totalDiv = document.createElement("span");
     totalDiv.innerHTML = ` ${index + 1} / ${thanksMax}`;
