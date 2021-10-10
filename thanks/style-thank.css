@@ -105,7 +105,7 @@ img{
     position: absolute;
     left: -10.4166666667%;
     right: -10.4166666667%;
-    top: 1em;
+    top: -14em;
 }
 .navbar .btn{
     -webkit-appearance: none;
@@ -116,6 +116,7 @@ img{
     font-weight: bold;
     cursor: pointer;
     color: #333;
+    padding-top: 10em;
     padding-bottom: 10em;
 }
 .btn.prev{
