@@ -9,6 +9,9 @@ html > *{
     overflow-y: scroll;
     touch-action: manipulation;
 }
+body{
+    touch-action: manipulation, pan-y, pan-x;
+}
 img{
     max-width: 100%;
     vertical-align: top;
