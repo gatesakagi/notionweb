@@ -101,13 +101,9 @@ img{
 .footer{
     display: flex;
 }
-.navbar{
+.btn{
     position: absolute;
-    left: -10.4166666667%;
-    right: -10.4166666667%;
-    top: -14em;
-}
-.navbar .btn{
+    top: 0;
     -webkit-appearance: none;
     border: none;
     outline: none;
@@ -116,16 +112,28 @@ img{
     font-weight: bold;
     cursor: pointer;
     color: #333;
-    padding-top: 10em;
-    padding-bottom: 10em;
+    width: 40px;
+	height: 50px;
+    background:rgba(0,0,0,0.1);
+    -webkit-user-select: none;  
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-ms-user-select: none;
+    transition: all 0.1s ease;
 }
-.btn.prev{
-    float: left;
-}
-.btn.next{
-    float :right;
-}
+
 .btn.disabled{
     cursor:not-allowed;
     color: #CCC;
+}
+.btn:hover{
+    background:rgba(0,0,0,0.3);	
+}
+#next{
+    right: -10.4166666667%;
+    border-radius: 0px 7px 7px 0px;
+}
+#prev{
+    left: -10.4166666667%; 
+    border-radius: 7px 0px 0px 7px;
 }
