@@ -16,6 +16,7 @@ img{
     width: 100%;
     max-width: 768px;
     margin: auto;
+    touch-action: manipulation;
 }
 .main{
     position: relative;
