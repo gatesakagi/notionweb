@@ -5,7 +5,7 @@ async function getThanksByDB() {
 
     Swal.fire({
         title: '',
-        text: "資料載入中...請稍等",
+        html: '<div class="loading"><img src="images/notion-logo-no-background.png"><p>資料載入中，請稍候...</p></div>',
         showConfirmButton: false
     });
     
