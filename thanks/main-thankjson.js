@@ -2,16 +2,30 @@ let index = 0;
 let readThankDB;
 let thanksMax = 0;
 
+function wait(ms){
+    var start = new Date().getTime();
+    var end = start;
+    while(end < start + ms) {
+      end = new Date().getTime();
+   }
+ }
+
 getThanksByDB();
 
 function getThanksByDB() {
+    Swal.fire({
+        title: '',
+        html: '<div class="loading"><img src="images/notion-logo-no-background.png"><p>資料載入中，請稍候...</p></div>',
+        showConfirmButton: false
+    });
     var requestURL = 'thanks.json';
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
     request.onload = function() {
-        console.log(request.response);
+        wait(5000);
+        Swal.close();
         readThankDB = request.response;
         thanksMax = Object.keys(readThankDB).length;
         addData(0);
