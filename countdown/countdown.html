@@ -83,12 +83,12 @@
 
     <script>
         // create image dom dynamically
-        const countdownCounts = 30;
+        const countdownCounts = 31;
         for (let index = 0; index < countdownCounts; index++) {
             let newCountdown = document.createElement('div');
             newCountdown.className = 'countdown fade';
             let newCountdownImg = document.createElement('img');
-            newCountdownImg.src = 'imgs/countdown-' + (29 - index) + '.png';
+            newCountdownImg.src = 'imgs/countdown-' + (30 - index) + '.png';
             newCountdown.appendChild(newCountdownImg);
             let containerDom = document.querySelector('.container');
             containerDom.appendChild(newCountdown);
@@ -110,6 +110,7 @@
         function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("countdown");
+            if (n === slides.length) { slideIndex = 1 }
             if (n > slides.length) { slideIndex = 1 }
             if (n < 1) { slideIndex = slides.length }
             for (i = 0; i < slides.length; i++) {
